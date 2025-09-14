@@ -1,0 +1,78 @@
+// ワールドの設定項目
+dispatch minecraft:storage["gg_common:world_settings"] to struct {
+    /// 経験値を保持する
+    keepExp: boolean,
+
+    /// クイック取得
+    quickGet: boolean,
+        /// 取得時にインベントリの元の位置にアイテムを戻す
+        returnPos: boolean,
+    
+    /// ワンクリックでお墓を破壊する
+    oneClick: boolean,
+
+    /// 憑依機能
+    posession: boolean,
+
+    /// お墓へのテレポート
+    tpGrave: boolean,
+
+    /// 一人当たりのお墓の保存上限
+    graveMax: int,
+
+    /// 初インストール時
+    newInstall: boolean
+}
+
+// 個人設定
+dispatch minecraft:storage["gg_player:"] to struct {
+    // 各プレイヤーの格納場所
+    players: [struct {
+        /// プレイヤーのid
+        id: int,
+
+        /// プレイヤーの設定
+        settings: struct {
+            /// 他のプレイヤーがお墓を壊せないようにする
+            othersBreaking: boolean,
+            
+            /// お墓にカーソルを合わせた時に表示する情報
+            visibles: struct {
+                /// アイテム
+                Items: boolean,
+                /// 経験値
+                Exp: boolean
+            },
+
+            /// お墓の情報
+            graves: [struct {
+                /// お墓のid
+                id: int,
+
+                /// インベントリ情報
+                inventory: any,
+
+                /// 装備情報
+                equipment: any,
+
+                /// 経験値
+                xp: struct {
+                    /// レベル
+                    levels: int,
+                    
+                    /// ポイント
+                    points: int
+                },
+
+                /// ディメンション
+                dimension: string,
+
+                /// バイオーム
+                biome: string,
+
+                /// 死亡位置
+                pos: [double, double, double]
+            }]
+        }
+    }]
+}
