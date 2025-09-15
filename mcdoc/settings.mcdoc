@@ -1,5 +1,3 @@
-//
-
 // ワールドの設定項目
 dispatch minecraft:storage["gg_common:world_settings"] to struct {
     /// 経験値を保持する
@@ -78,7 +76,7 @@ dispatch minecraft:storage["gg_player:"] to struct {
             dimension: string,
 
             /// 死亡位置
-            pos: [double, double, double]
+            pos: [double, double, double],
         }]
     }],
 }

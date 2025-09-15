@@ -13,5 +13,7 @@ dispatch minecraft:storage[gg_common:func_option] to struct {
 
         /// idを一時保存しておく
         tmpId: int
-    }
+    },
+
+    errorCode: int
 }
