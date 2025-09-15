@@ -13,5 +13,21 @@ dispatch minecraft:storage[gg_tmp:] to struct {
 
         /// お墓のid
         grave: int
+    },
+
+    /// テキストの作業領域
+    text: struct {
+        A: any,
+        B: any
+    },
+
+    /// アイテムidをテキストに変換するための作業領域
+    idToText: any,
+
+    /// お墓を読み込むときに情報を入れる箱
+    graveLoad: struct {
+        dimension: string,
+        x: int,
+        z: int
     }
 }
