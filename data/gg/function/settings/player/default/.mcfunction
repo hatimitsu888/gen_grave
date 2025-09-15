@@ -6,7 +6,7 @@ data remove storage gg_tmp: player
 
 # 初期設定
 data modify storage gg_tmp: player.settings.othersBreaking set value true
-data modify storage gg_tmp: player.settings.visibles.items set value true
+data modify storage gg_tmp: player.settings.visibles.items set value false
 data modify storage gg_tmp: player.settings.visibles.exp set value true
 
 # idをリセットする(オプション)
