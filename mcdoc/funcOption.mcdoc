@@ -15,4 +15,3 @@ dispatch minecraft:storage[gg_common:func_option] to struct {
         tmpId: int
     }
 }
-
