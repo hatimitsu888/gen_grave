@@ -31,10 +31,10 @@ data remove storage gg_tmp: grave
 
     # 経験値
         # レベル
-        data modify storage gg_tmp: grave.xp.levels set from entity @s XpLevel
+        execute store result storage gg_tmp: grave.xp.levels int 1 run xp query @s levels
 
         # ポイント
-        data modify storage gg_tmp: grave.xp.points set from entity @s XpP
+        execute store result storage gg_tmp: grave.xp.points int 1 run xp query @s points
     
     # ディメンション
     data modify storage gg_tmp: grave.dimension set from entity @s Dimension
