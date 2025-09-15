@@ -10,15 +10,15 @@ data modify storage gg_tmp: idToText set value \
 ## e4・・・オフハンド
 
 # 取り出す
-execute if data storage gg_tmp: grave.inventory[{Slot:0b}] run data modify storage gg_tmp: idToText.h0 set string storage gg_tmp: grave.inventory{Slot:0b}.id 10
-execute if data storage gg_tmp: grave.inventory[{Slot:1b}] run data modify storage gg_tmp: idToText.h1 set string storage gg_tmp: grave.inventory{Slot:1b}.id 10
-execute if data storage gg_tmp: grave.inventory[{Slot:2b}] run data modify storage gg_tmp: idToText.h2 set string storage gg_tmp: grave.inventory{Slot:2b}.id 10
-execute if data storage gg_tmp: grave.inventory[{Slot:3b}] run data modify storage gg_tmp: idToText.h3 set string storage gg_tmp: grave.inventory{Slot:3b}.id 10
-execute if data storage gg_tmp: grave.inventory[{Slot:4b}] run data modify storage gg_tmp: idToText.h4 set string storage gg_tmp: grave.inventory{Slot:4b}.id 10
-execute if data storage gg_tmp: grave.inventory[{Slot:5b}] run data modify storage gg_tmp: idToText.h5 set string storage gg_tmp: grave.inventory{Slot:5b}.id 10
-execute if data storage gg_tmp: grave.inventory[{Slot:6b}] run data modify storage gg_tmp: idToText.h6 set string storage gg_tmp: grave.inventory{Slot:6b}.id 10
-execute if data storage gg_tmp: grave.inventory[{Slot:7b}] run data modify storage gg_tmp: idToText.h7 set string storage gg_tmp: grave.inventory{Slot:7b}.id 10
-execute if data storage gg_tmp: grave.inventory[{Slot:8b}] run data modify storage gg_tmp: idToText.h8 set string storage gg_tmp: grave.inventory{Slot:8b}.id 10
+execute if data storage gg_tmp: grave.inventory[{Slot:0b}] run data modify storage gg_tmp: idToText.h0 set string storage gg_tmp: grave.inventory[{Slot:0b}].id 10
+execute if data storage gg_tmp: grave.inventory[{Slot:1b}] run data modify storage gg_tmp: idToText.h1 set string storage gg_tmp: grave.inventory[{Slot:1b}].id 10
+execute if data storage gg_tmp: grave.inventory[{Slot:2b}] run data modify storage gg_tmp: idToText.h2 set string storage gg_tmp: grave.inventory[{Slot:2b}].id 10
+execute if data storage gg_tmp: grave.inventory[{Slot:3b}] run data modify storage gg_tmp: idToText.h3 set string storage gg_tmp: grave.inventory[{Slot:3b}].id 10
+execute if data storage gg_tmp: grave.inventory[{Slot:4b}] run data modify storage gg_tmp: idToText.h4 set string storage gg_tmp: grave.inventory[{Slot:4b}].id 10
+execute if data storage gg_tmp: grave.inventory[{Slot:5b}] run data modify storage gg_tmp: idToText.h5 set string storage gg_tmp: grave.inventory[{Slot:5b}].id 10
+execute if data storage gg_tmp: grave.inventory[{Slot:6b}] run data modify storage gg_tmp: idToText.h6 set string storage gg_tmp: grave.inventory[{Slot:6b}].id 10
+execute if data storage gg_tmp: grave.inventory[{Slot:7b}] run data modify storage gg_tmp: idToText.h7 set string storage gg_tmp: grave.inventory[{Slot:7b}].id 10
+execute if data storage gg_tmp: grave.inventory[{Slot:8b}] run data modify storage gg_tmp: idToText.h8 set string storage gg_tmp: grave.inventory[{Slot:8b}].id 10
 
 execute if data storage gg_tmp: grave.equipment.head run data modify storage gg_tmp: idToText.e0 set string storage gg_tmp: grave.equipment.head.id 10
 execute if data storage gg_tmp: grave.equipment.chest run data modify storage gg_tmp: idToText.e1 set string storage gg_tmp: grave.equipment.chest.id 10
