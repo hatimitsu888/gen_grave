@@ -14,7 +14,7 @@ $execute store result score #tmp.A gg.math if data storage gg_player: players[{i
 execute store result score #tmp.B gg.math run data get storage gg_common:world_settings graveMax
 
 # 保存上限を超えていたら、古いものを消去する
-execute if score #tmp.A gg.math > #tmp.B gg.math
+execute if score #tmp.A gg.math > #tmp.B gg.math run function gg:graves/create/delete_over with storage gg_tmp: id
 
 # リセット
 scoreboard players reset #tmp.A gg.math
