@@ -38,5 +38,8 @@ ride @n[distance=..1, tag=gg-init, tag=gg-head] mount @n[distance=..1, tag=gg-in
 execute store result score @n[distance=..1, tag=gg-init, tag=gg-core] gg.id.player run data get storage gg_tmp: id.player
 execute store result score @n[distance=..1, tag=gg-init, tag=gg-core] gg.id.grave run data get storage gg_tmp: id.grave
 
+# カウントを追加
+scoreboard players set @n[distance=..1, tag=gg-init, tag=gg-core] gg.clickCount 5
+
 # タグを消去
 tag @e[tag=gg-init] remove gg-init

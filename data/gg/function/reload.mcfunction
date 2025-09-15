@@ -21,3 +21,6 @@ scoreboard objectives add gg.playerDeath deathCount
 
 # 計算用のスコア
 scoreboard objectives add gg.math dummy
+
+# お墓の状態
+scoreboard objectives add gg.clickCount dummy
