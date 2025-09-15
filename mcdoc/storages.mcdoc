@@ -1,3 +1,5 @@
+//
+
 // ワールドの設定項目
 dispatch minecraft:storage["gg_common:world_settings"] to struct {
     /// 経験値を保持する
@@ -27,52 +29,56 @@ dispatch minecraft:storage["gg_common:world_settings"] to struct {
 // 個人設定
 dispatch minecraft:storage["gg_player:"] to struct {
     // 各プレイヤーの格納場所
-    players: [struct {
+    players: [struct PlayerSettings {
         /// プレイヤーのid
         id: int,
 
         /// プレイヤーの設定
         settings: struct {
-            /// 他のプレイヤーがお墓を壊せないようにする
+            /// 他のプレイヤーがお墓を壊せるようにする
             othersBreaking: boolean,
             
             /// お墓にカーソルを合わせた時に表示する情報
             visibles: struct {
-                /// アイテム
-                Items: boolean,
+                /// ホットバーと装備
+                items: boolean,
+
                 /// 経験値
-                Exp: boolean
+                exp: boolean
+            }
+        },
+
+        /// お墓の情報
+        graves: [struct {
+            /// お墓のid
+            id: int,
+
+            /// インベントリ情報
+            inventory: any,
+
+            /// 装備情報
+            equipment: any,
+
+            /// 経験値
+            xp: struct {
+                /// レベル
+                levels: int,
+                
+                /// ポイント
+                points: int
             },
 
-            /// お墓の情報
-            graves: [struct {
-                /// お墓のid
-                id: int,
+            /// ディメンション
+            dimension: string,
 
-                /// インベントリ情報
-                inventory: any,
+            /// バイオーム
+            biome: string,
 
-                /// 装備情報
-                equipment: any,
+            /// 死亡位置
+            pos: [double, double, double]
+        }]
+    }],
 
-                /// 経験値
-                xp: struct {
-                    /// レベル
-                    levels: int,
-                    
-                    /// ポイント
-                    points: int
-                },
-
-                /// ディメンション
-                dimension: string,
-
-                /// バイオーム
-                biome: string,
-
-                /// 死亡位置
-                pos: [double, double, double]
-            }]
-        }
-    }]
+    /// プレイヤー設定を一時的に保存する
+    tmp: ::mcdoc::storages::PlayerSettings
 }
