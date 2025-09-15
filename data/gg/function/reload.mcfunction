@@ -4,6 +4,9 @@
 # ワールド設定を初期化（初インストール時のみ）
 execute unless data storage gg_common:world_settings newInstall run function gg:settings/world/default
 
+# キープインベントリをオンにする
+gamerule keepInventory true
+
 ##### スコア #####
 # プレイヤーid
 scoreboard objectives add gg.id.player dummy
@@ -11,4 +14,10 @@ scoreboard objectives add gg.id.player dummy
     scoreboard players add #maxPlayerId gg.id.player 0
 
 # お墓のid
-scoreboard objectives add gg.id.player dummy
+scoreboard objectives add gg.id.grave dummy
+
+# 死亡時に加算するスコア
+scoreboard objectives add gg.playerDeath deathCount
+
+# 計算用のスコア
+scoreboard objectives add gg.math dummy
