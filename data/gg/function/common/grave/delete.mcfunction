@@ -20,7 +20,7 @@ function gg:common/grave/load with storage gg_tmp: graveLoad
 
 # idをスコアに変換
 execute store result score #tmp.A gg.id.player run data get storage gg_tmp: id.player
-execute store result score #tmp.A gg.id.grave run data get storage gg_tmp: id.player
+execute store result score #tmp.A gg.id.grave run data get storage gg_tmp: id.grave
 
 # お墓を消去
 execute as @e[type=text_display, tag=gg-core] if score @s gg.id.player = #tmp.A gg.id.player if score @s gg.id.grave = #tmp.A gg.id.grave run function gg:common/grave/kill
