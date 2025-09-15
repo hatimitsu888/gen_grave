@@ -5,8 +5,6 @@ dispatch minecraft:storage["gg_common:world_settings"] to struct {
 
     /// クイック取得
     quickGet: boolean,
-        /// 取得時にインベントリの元の位置にアイテムを戻す
-        returnPos: boolean,
     
     /// ワンクリックでお墓を破壊する
     oneClick: boolean,
