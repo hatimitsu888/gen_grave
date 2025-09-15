@@ -2,18 +2,18 @@
 # プレイヤー設定のデフォルト
 
 # ストレージをリセット
-data remove storage gg_tmp: playerTmp
+data remove storage gg_tmp: player
 
 # 初期設定
-data modify storage gg_tmp: playerTmp.settings.othersBreaking set value true
-data modify storage gg_tmp: playerTmp.settings.visibles.items set value true
-data modify storage gg_tmp: playerTmp.settings.visibles.exp set value true
+data modify storage gg_tmp: player.settings.othersBreaking set value true
+data modify storage gg_tmp: player.settings.visibles.items set value true
+data modify storage gg_tmp: player.settings.visibles.exp set value true
 
 # idをリセットする(オプション)
 execute if data storage gg_common:func_option {playerSettings:{resetId: true}} run function gg:settings/player/default/reset_id
 
 # idをセットする
-execute store result storage gg_tmp: playerTmp.id int 1 run scoreboard players get @s gg.id.player
+execute store result storage gg_tmp: player.id int 1 run scoreboard players get @s gg.id.player
 
 # お墓をリセットする(オプション)
 execute if data storage gg_common:func_option {playerSettings:{resetGraves: true}} run function gg:settings/player/default/reset_graves
