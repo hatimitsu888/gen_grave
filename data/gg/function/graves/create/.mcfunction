@@ -43,10 +43,10 @@ data remove storage gg_tmp: grave
     data modify storage gg_tmp: grave.pos set from entity @s Pos
     
 # 経験値を計算
-execute if data storage gg_common:world_settings {keepExp: false} run function gg:graves/create/math_xp
+function gg:graves/create/math_xp
 
 # トータル
-execute if data storage gg_common:world_settings {keepExp: true} run function gg:graves/create/math_xp_total/
+function gg:graves/create/math_xp_total/
 
 ##### データを挿入 #####
 execute store result storage gg_common:func_option errorCode int 1 run function gg:graves/create/insert_data with storage gg_tmp: id
