@@ -67,7 +67,10 @@ dispatch minecraft:storage["gg_player:"] to struct {
                 points: int,
 
                 /// 計算後の経験値
-                result: int
+                result: int,
+
+                /// トータルの経験値ポイント
+                total: int
             },
 
             /// ディメンション
