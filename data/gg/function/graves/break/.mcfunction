@@ -13,3 +13,11 @@ execute if data storage gg_common:world_settings {quickGet:false} at @s run func
 
 # インベントリの元の位置に戻す
 execute if data storage gg_common:world_settings {quickGet:true} at @s run function gg:graves/break/return/
+
+
+# 経験値
+execute as @p[tag=gg-this] run function gg:graves/break/xp with storage gg_tmp: grave.xp
+
+
+# お墓を削除
+function gg:common/grave/delete
