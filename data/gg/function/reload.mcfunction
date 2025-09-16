@@ -24,3 +24,6 @@ scoreboard objectives add gg.math dummy
 
 # お墓の状態
 scoreboard objectives add gg.clickCount dummy
+
+# ワールド設定用のトリガー
+scoreboard objectives add gg.worldSetting trigger
