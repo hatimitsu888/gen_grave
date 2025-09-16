@@ -121,6 +121,7 @@ $dialog show @s {\
         },\
     ],\
     "can_close_with_escape": true,\
+    "pause": false,\
     "yes": {\
         "label": {\
             "text": "決定"\
