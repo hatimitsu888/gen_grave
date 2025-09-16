@@ -1,38 +1,48 @@
 {
-  "type": "minecraft:notice",
-  "title": {
-    "text": "Gen Grave",
-    "color": "gold"
-  },
-  "external_title": {
-    "text": "[Gen Grave] ワールド設定",
-    "color": "gold"
-  },
-  "body": [
-    {
-      "type": "minecraft:plain_message",
-      "contents": [
-        "こちらの設定は\n",
+    "type": "minecraft:confirmation",
+    "title": {
+        "text": "Gen Grave",
+        "color": "gold"
+    },
+    "external_title": {
+        "text": "[Gen Grave] ワールド設定",
+        "color": "gold"
+    },
+    "body": [
         {
-          "text": "[チートがオン]",
-          "color": "aqua"
+            "type": "minecraft:plain_message",
+            "contents": [
+                "こちらの設定は\n",
+                {
+                    "text": "[チートがオン]",
+                    "color": "aqua"
+                },
+                "もしくは",
+                {
+                    "text": "[OP権限]",
+                    "color": "aqua"
+                },
+                "\nを持っている人のみが開けます。"
+            ]
+        }
+    ],
+    "can_close_with_escape": true,
+    "pause": false,
+    "yes": {
+        "label": {
+            "text": "開く"
         },
-        "もしくは",
-        {
-          "text": "[OP権限]",
-          "color": "aqua"
+        "width": 100,
+        "action": {
+            "type": "minecraft:run_command",
+            "command": "function gg:settings/world/ui/main/"
+        }
+    },
+    "no": {
+        "label": {
+            "text": "とじる",
+            "color": "gray"
         },
-        "\nを持っている人のみが開けます。"
-      ]
+        "width": 50
     }
-  ],
-  "can_close_with_escape": true,
-  "pause": false,
-  "action": {
-    "label": "開く",
-    "action": {
-      "type": "minecraft:run_command",
-      "command": "function gg:settings/world/ui/main/"
-    }
-  }
 }
