@@ -36,47 +36,5 @@ dispatch minecraft:storage[gg_tmp:] to struct {
         inventory: [struct {}],
         item: struct {},
         index: int
-    },
-
-    /// ワールドの設定を保存(文字列)
-    worldSettings: struct {
-        /// 経験値を保持する
-        keepExpT: string,
-        keepExpF: string,
-
-        /// クイック取得
-        quickGetT: string,
-        quickGetF: string,
-        
-        /// ワンクリックでお墓を破壊する
-        oneClickT: string,
-        oneClickF: string,
-
-        /// 憑依機能
-        posessionT: string,
-        posessionF: string,
-
-        /// お墓へのテレポート
-        tpGraveT: string,
-        tpGraveF: string,
-
-        /// 一人当たりのお墓の保存上限
-        graveMax: int,
-
-        /// キープインベントリ
-        keepInventoryT: string,
-        keepInventoryF: string,
-
-        /// マクロを入れる
-        text: string
-    },
-
-    /// スコアを文字列に変換
-    scoreToString: struct {
-        /// スコア
-        score: int,
-
-        /// 文字
-        result: string
     }
 }
