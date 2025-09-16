@@ -5,7 +5,10 @@
 scoreboard players enable @s gg.worldSetting
 
 # すべて初期化
-data modify storage gg_common:dialog worldSettings set value {keepExpT:"false", keepExpF:"false", quickGetT:"false", quickGetF:"false", oneClickT:"false", oneClickF:"false", posessionT:"false", posessionF:"false", tpGraveT:"false", tpGraveF:"false", graveMax:-1, keepInventoryT:"false", keepInventoryF:"false", text:""}
+data modify storage gg_common:dialog worldSettings set value {version:"0.0", keepExpT:"false", keepExpF:"false", quickGetT:"false", quickGetF:"false", oneClickT:"false", oneClickF:"false", posessionT:"false", posessionF:"false", tpGraveT:"false", tpGraveF:"false", graveMax:-1, keepInventoryT:"false", keepInventoryF:"false", text:""}
+
+# バージョンを設定
+data modify storage gg_common:dialog worldSettings.version set from storage gg_common:dialog version
 
 # マクロを設定
 data modify storage gg_common:dialog worldSettings.text set value "$(keepExp)$(quickGet)$(oneClick)$(posession)$(tpGrave)$(keepInventory)$(graveMax)"

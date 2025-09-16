@@ -1,6 +1,12 @@
 dispatch minecraft:storage[gg_common:dialog] to struct {
+    /// バージョン
+    version: string,
+
     /// ワールドの設定を保存(文字列)
     worldSettings: struct {
+        /// バージョン
+        version: string,
+
         /// 経験値を保持する
         keepExpT: string,
         keepExpF: string,

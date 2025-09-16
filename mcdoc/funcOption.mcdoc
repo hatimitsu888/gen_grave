@@ -1,8 +1,5 @@
 /// 関数を実行するときのオプション
 dispatch minecraft:storage[gg_common:func_option] to struct {
-    /// バージョン
-    version: string,
-
     /// プレイヤー設定の初期化
     playerSettings: struct {
         /// idを初期化する

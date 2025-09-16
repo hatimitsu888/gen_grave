@@ -10,6 +10,10 @@ $dialog show @s {\
     "body": [\
         {\
             "type": "minecraft:plain_message",\
+            "contents": "$(version)"\
+        },\
+        {\
+            "type": "minecraft:plain_message",\
             "contents": "この設定はプレイヤー全員に適用されます。"\
         }\
     ],\
