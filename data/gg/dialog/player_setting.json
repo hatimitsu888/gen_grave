@@ -1,0 +1,43 @@
+{
+    "type": "minecraft:multi_action",
+    "title": {
+        "text": "Gen Grave (プレイヤー設定)"
+    },
+    "external_title": {
+        "text": "[Gen Grave] プレイヤー設定"
+    },
+    "inputs": [],
+    "can_close_with_escape": true,
+    "pause": false,
+    "after_action": "none",
+    "exit_action": {
+        "label": "とじる",
+        "action": {
+            "type": "minecraft:run_command",
+            "command": "trigger gg.playerSetting set 0"
+        }
+    },
+    "columns": 1,
+    "actions": [
+        {
+            "label": {
+                "text": "お墓 >",
+                "color": "aqua"
+            },
+            "action": {
+                "type": "minecraft:run_command",
+                "command": "trigger gg.playerSetting set 2"
+            }
+        },
+        {
+            "label": {
+                "text": "設定 >",
+                "color": "white"
+            },
+            "action": {
+                "type": "minecraft:run_command",
+                "command": "trigger gg.playerSetting set 3"
+            }
+        }
+    ]
+}

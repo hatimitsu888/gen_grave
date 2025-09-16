@@ -38,6 +38,22 @@ dispatch minecraft:storage[gg_common:dialog] to struct {
         text: string
     },
 
+    /// プレイヤー設定を保存(文字列)
+    playerSettings: struct {
+        /// 他の人が壊せるかどうか
+        othersBreakingT: string,
+        othersBreakingF: string,
+
+        /// 経験値
+        exp: string,
+
+        /// アイテム
+        items: string,
+
+        /// マクロを入れる
+        text: string
+    },
+
     /// スコアを文字列に変換
     scoreToString: struct {
         /// スコア

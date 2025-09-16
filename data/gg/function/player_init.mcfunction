@@ -1,6 +1,10 @@
 #> gg:player_init
 # プレイヤーが新しく入ったときの初期設定
 
+# トリガーを設定
+scoreboard players set @s gg.playerSetting -1
+scoreboard players enable @s gg.playerSetting
+
 # ダミースコアが設定されていなかったら初期設定
 execute unless score #maxPlayerId gg.id.player matches -2147483648..2147483647 run scoreboard players set #maxPlayerId gg.id.player 0
 

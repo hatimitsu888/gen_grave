@@ -30,3 +30,6 @@ scoreboard objectives add gg.clickCount dummy
 
 # ワールド設定用のトリガー
 scoreboard objectives add gg.worldSetting trigger
+
+# プレイヤー設定用のトリガー
+scoreboard objectives add gg.playerSetting trigger

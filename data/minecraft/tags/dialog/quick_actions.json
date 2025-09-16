@@ -1,5 +1,6 @@
 {
     "values": [
-        "gg:world_settings_warn"
+        "gg:world_settings_warn",
+        "gg:player_setting"
     ]
 }
