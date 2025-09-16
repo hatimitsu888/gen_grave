@@ -9,7 +9,7 @@
                         "entity": "this",
                         "scores": {
                             "gg.worldSetting": {
-                                "min": -2147483648,
+                                "min": 0,
                                 "max": 2147483647
                             }
                         }
