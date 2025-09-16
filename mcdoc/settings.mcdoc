@@ -1,5 +1,5 @@
 // ワールドの設定項目
-dispatch minecraft:storage["gg_common:world_settings"] to struct {
+dispatch minecraft:storage["gg_common:world_settings"] to struct WorldSettings {
     /// 経験値を保持する
     keepExp: boolean,
 
