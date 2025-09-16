@@ -48,15 +48,14 @@ function gg:graves/create/math_xp
 # トータル
 function gg:graves/create/math_xp_total/
 
+##### お墓を生成する #####
+function gg:graves/create/summon
+
 ##### データを挿入 #####
 execute store result storage gg_common:func_option errorCode int 1 run function gg:graves/create/insert_data with storage gg_tmp: id
 
 # エラーチェック
 execute unless data storage gg_common:func_option {errorCode: 0} run return run function gg:graves/create/error
-
-
-##### お墓を生成する #####
-function gg:graves/create/summon
 
 
 ##### プレイヤーの所持品を消去する #####
