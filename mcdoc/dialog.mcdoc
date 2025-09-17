@@ -54,6 +54,20 @@ dispatch minecraft:storage[gg_common:dialog] to struct {
         text: string
     },
 
+    /// お墓
+    graves: struct {
+        /// 並べ替え
+        new: string,
+        old: string,
+
+        /// アクション
+        actions: [struct {
+            label: struct {
+                text: string
+            }
+        }],
+    },
+
     /// スコアを文字列に変換
     scoreToString: struct {
         /// スコア
@@ -61,5 +75,13 @@ dispatch minecraft:storage[gg_common:dialog] to struct {
 
         /// 文字
         result: string
+    },
+
+    /// ラベルに記載する情報
+    label: struct {
+        x: int,
+        y: int,
+        z: int,
+        dimension: string
     }
 }
