@@ -1,7 +1,7 @@
 {
     "type": "minecraft:confirmation",
     "title": {
-        "text": "Gen Grave",
+        "text": "Gen Grave (ワールド設定)",
         "color": "gold"
     },
     "external_title": {
@@ -32,7 +32,7 @@
         "label": {
             "text": "開く"
         },
-        "width": 100,
+        "width": 150,
         "action": {
             "type": "minecraft:run_command",
             "command": "function gg:settings/world/ui/main/"
@@ -40,8 +40,7 @@
     },
     "no": {
         "label": {
-            "text": "とじる",
-            "color": "gray"
+            "text": "とじる"
         },
         "width": 50
     }

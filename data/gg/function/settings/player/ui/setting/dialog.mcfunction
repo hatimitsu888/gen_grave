@@ -4,7 +4,7 @@
 $dialog show @s {\
     "type": "minecraft:confirmation",\
     "title": {\
-        "text": "Gen Grave (プレイヤー設定)"\
+        "text": "Gen Grave (個人設定)"\
     },\
     "body": [\
         {\
@@ -84,7 +84,7 @@ $dialog show @s {\
         "label": {\
             "text": "決定"\
         },\
-        "width": 100,\
+        "width": 150,\
         "action": {\
             "type": "minecraft:dynamic/run_command",\
             "template": "trigger gg.playerSetting set 1$(text)"\
@@ -92,8 +92,7 @@ $dialog show @s {\
     },\
     "no": {\
         "label": {\
-            "text": "戻る",\
-            "color": "gray"\
+            "text": "戻る"\
         },\
         "width": 50,\
         "action": {\

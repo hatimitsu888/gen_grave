@@ -4,7 +4,7 @@
 $dialog show @s {\
     "type": "minecraft:multi_action",\
     "title": {\
-        "text": "Gen Grave (プレイヤー設定)"\
+        "text": "Gen Grave (個人設定)"\
     },\
     "body": [\
         {\
@@ -29,6 +29,6 @@ $dialog show @s {\
             "command": "trigger gg.playerSetting set 1"\
         }\
     },\
-    "columns": 1,\
+    "columns": 2,\
     "actions": $(actions) \
 }

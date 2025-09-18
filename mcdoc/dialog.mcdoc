@@ -79,7 +79,8 @@ dispatch minecraft:storage[gg_common:dialog] to struct {
 
     /// ラベルに記載する情報
     label: struct {
-        trigger: int,
+        triggerA: int,
+        triggerB: int,
         x: int,
         y: int,
         z: int,

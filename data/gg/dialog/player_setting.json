@@ -1,10 +1,10 @@
 {
     "type": "minecraft:multi_action",
     "title": {
-        "text": "Gen Grave (プレイヤー設定)"
+        "text": "Gen Grave (個人設定)"
     },
     "external_title": {
-        "text": "[Gen Grave] プレイヤー設定"
+        "text": "[Gen Grave] 個人設定"
     },
     "inputs": [],
     "can_close_with_escape": true,
