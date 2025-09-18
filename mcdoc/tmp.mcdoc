@@ -37,6 +37,7 @@ dispatch minecraft:storage[gg_tmp:] to struct {
     /// アイテムをドロップするときのやつ
     dropItems: struct {
         inventory: [struct {}],
+        equipment: any,
         item: struct {},
         index: int
     }

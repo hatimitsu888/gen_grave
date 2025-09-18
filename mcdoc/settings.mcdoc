@@ -46,6 +46,21 @@ dispatch minecraft:storage["gg_player:"] to struct {
                 exp: boolean
             }
         },
+        
+        /// 一時保存用
+        tmp: struct {
+            /// 元の
+            origin: struct {
+                /// インベントリ
+                inventory: any,
+
+                /// 装備
+                equipment: any
+            },
+
+            /// ゲームモード
+            gamemode: int
+        },
 
         /// お墓の情報
         graves: [struct Grave{

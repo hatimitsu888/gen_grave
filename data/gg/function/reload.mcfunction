@@ -33,3 +33,8 @@ scoreboard objectives add gg.worldSetting trigger
 
 # プレイヤー設定用のトリガー
 scoreboard objectives add gg.playerSetting trigger
+
+
+# 当たり判定のないチーム
+team add gg.noCollision
+team modify gg.noCollision collisionRule never

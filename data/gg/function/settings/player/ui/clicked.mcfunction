@@ -19,7 +19,7 @@ execute if score @s gg.playerSetting matches 0 run dialog clear @s
 execute if score @s gg.playerSetting matches 1000..9999 run function gg:settings/player/ui/setting/apply
 
 # お墓を開く initial=10
-execute if score @s gg.playerSetting matches 10000..19999
+execute if score @s gg.playerSetting matches 10000..19999 run function gg:settings/player/ui/graves/grave/clicked
 
 # リセット
 advancement revoke @s only gg:settings/player

@@ -1,6 +1,9 @@
 #> gg:settings/player/ui/graves/
 # お墓の情報を整理してダイアログに書き出す
 
+# スペクテイターモードでは確認不可
+execute if entity @s[gamemode=spectator] run return run tellraw @s {text: "スペクテイターモードでお墓を確認することはできません！", color: "red"}
+
 # リセット
 data modify storage gg_common:dialog graves set value {actions:[], new:'{"text":"[新しい]", "color":"dark_gray", "click_event":{"action":"run_command", "command":"trigger gg.playerSetting set 10"}, "hover_event":{"action":"show_text", "value":"新しい順に並べ替え"}}', old:'{"text":"[古い]", "color":"dark_gray", "click_event":{"action":"run_command", "command":"trigger gg.playerSetting set 11"}, "hover_event":{"action":"show_text", "value":"古い順に並べ替え"}}'}
 data remove storage gg_common:dialog graves.actions
