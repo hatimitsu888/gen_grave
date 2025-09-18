@@ -2,7 +2,7 @@
 # アイテムをドロップする準備
 
 # インベントリ
-function gg:graves/break/drop/inventory
+execute if data storage gg_tmp: dropItems.inventory[0] run function gg:graves/break/drop/inventory
 
 # 装備
     # ヘルメット
