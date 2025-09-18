@@ -9,7 +9,7 @@ execute if score @s gg.playerSetting matches 1 run dialog show @s gg:player_sett
 execute if score @s gg.playerSetting matches 3 run function gg:settings/player/ui/setting/
 
 # お墓
-execute if score @s gg.playerSetting matches 10..11 run function gg:settings/player/ui/graves/
+execute if score @s gg.playerSetting matches 10..12 run function gg:settings/player/ui/graves/
 
 ##### 処理 #####
 # 閉じる
