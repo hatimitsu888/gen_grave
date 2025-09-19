@@ -40,5 +40,12 @@ dispatch minecraft:storage[gg_tmp:] to struct {
         equipment: any,
         item: struct {},
         index: int
+    },
+
+    /// 名前を設定する
+    setName: struct {
+        x: int,
+        y: int,
+        z: int
     }
 }

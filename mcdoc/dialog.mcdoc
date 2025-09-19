@@ -77,13 +77,23 @@ dispatch minecraft:storage[gg_common:dialog] to struct {
         result: string
     },
 
-    /// ラベルに記載する情報
+    /// 一覧に記載する情報
     label: struct {
         triggerA: int,
         triggerB: int,
+        name: string,
+        dimension: string
+    },
+
+    /// 詳細に記載する情報
+    detail: struct {
+        name: string,
+        dimension: string,
         x: int,
         y: int,
         z: int,
-        dimension: string
+        xpL: int,
+        xpP: int,
+        id: string
     }
 }

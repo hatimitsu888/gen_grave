@@ -59,7 +59,13 @@ dispatch minecraft:storage["gg_player:"] to struct {
             },
 
             /// ゲームモード
-            gamemode: int
+            gamemode: int,
+
+            /// お墓のid
+            graveId: int,
+
+            /// 前のページ
+            before: string,
         },
 
         /// お墓の情報
@@ -93,6 +99,9 @@ dispatch minecraft:storage["gg_player:"] to struct {
 
             /// 死亡位置
             pos: [double, double, double],
+
+            /// 名前
+            name: string,
         }]
     }],
 }
