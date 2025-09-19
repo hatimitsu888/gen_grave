@@ -13,10 +13,8 @@ execute store result storage gg_common:dialog label.triggerB int 1 run scoreboar
 # リセット
 scoreboard players reset #tmp.A gg.math
 
-# 位置を整数に
-execute store result storage gg_common:dialog label.x int 1 run data get storage gg_tmp: grave.pos[0] 1
-execute store result storage gg_common:dialog label.y int 1 run data get storage gg_tmp: grave.pos[1] 1
-execute store result storage gg_common:dialog label.z int 1 run data get storage gg_tmp: grave.pos[2] 1
+# 名前を設定
+data modify storage gg_common:dialog label.name set from storage gg_tmp: grave.name
 
 # ディメンションを取り出す
 data modify storage gg_common:dialog label.dimension set from storage gg_tmp: grave.dimension

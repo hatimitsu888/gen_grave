@@ -41,7 +41,13 @@ data remove storage gg_tmp: grave
 
     # 位置
     data modify storage gg_tmp: grave.pos set from entity @s Pos
-    
+
+    # 名前
+    execute store result storage gg_tmp: setName.x int 1 run data get storage gg_tmp: grave.pos[0] 1
+    execute store result storage gg_tmp: setName.y int 1 run data get storage gg_tmp: grave.pos[1] 1
+    execute store result storage gg_tmp: setName.z int 1 run data get storage gg_tmp: grave.pos[2] 1
+    function gg:graves/create/set_name with storage gg_tmp: setName
+
 # 経験値を計算
 function gg:graves/create/math_xp
 
