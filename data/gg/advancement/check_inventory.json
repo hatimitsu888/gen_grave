@@ -16,6 +16,6 @@
         }
     },
     "rewards": {
-        "function": "gg:settings/player/inventory/main"
+        "function": "gg:settings/player/ui/graves/inventory/main"
     }
 }

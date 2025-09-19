@@ -1,4 +1,4 @@
-#> gg:settings/palyer/inventory/grave
+#> gg:settings/player/ui/graves/inventory/grave
 # お墓のインベントリの中を確認する
 
 # ダイアログを消す
@@ -7,13 +7,21 @@ dialog clear @s
 # プレイヤーの情報を取得
 function gg:common/player/fetch_data with storage gg_tmp: id
 
+# これを開いたページを取得
+execute if score @s gg.playerSetting matches 11000..11999 run data modify storage gg_tmp: player.tmp.before set value "list"
+execute if score @s gg.playerSetting matches 12000..12999 run data modify storage gg_tmp: player.tmp.before set value "detail"
+
 # お墓のidを取得
 scoreboard players operation #tmp.A gg.math = @s gg.playerSetting
+execute if score #tmp.A gg.math matches 12000..12999 run scoreboard players remove #tmp.A gg.math 1000
 scoreboard players remove #tmp.A gg.math 11000
 
 # お墓の情報を取得
 execute store result storage gg_tmp: id.grave int 1 run scoreboard players get #tmp.A gg.math
 function gg:common/grave/fetch_data with storage gg_tmp: id
+
+# お墓のidを保存
+execute store result storage gg_tmp: player.tmp.graveId int 1 run scoreboard players get #tmp.A gg.math
 
 # リセット
 scoreboard players reset #tmp.A gg.math
@@ -29,7 +37,7 @@ execute if entity @s[gamemode=creative] run data modify storage gg_tmp: player.t
 execute if entity @s[gamemode=adventure] run data modify storage gg_tmp: player.tmp.gamemode set value 2
 
 # 保存
-function gg:settings/player/inventory/set_tmp with storage gg_tmp: id
+function gg:settings/player/ui/graves/inventory/set_tmp with storage gg_tmp: id
 
 # リセット
 data remove storage gg_tmp: player.tmp
@@ -69,4 +77,4 @@ data modify storage gg_tmp: dropItems.inventory set from storage gg_tmp: grave.i
 data modify storage gg_tmp: dropItems.equipment set from storage gg_tmp: grave.equipment
 
 # インベントリに戻す
-function gg:settings/player/inventory/return/
+function gg:settings/player/ui/graves/inventory/return/

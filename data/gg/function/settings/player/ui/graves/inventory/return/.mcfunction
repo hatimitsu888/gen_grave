@@ -1,4 +1,4 @@
-#> gg:settings/palyer/inventory/return/
+#> gg:settings/player/ui/graves/inventory/return/
 # アイテムをインベントリに戻す
 
 # 操作用のアマスタを召喚
@@ -8,7 +8,7 @@ summon armor_stand ~ ~ ~ {Tags:["gg-passItem"], Invisible:true, Invulnerable:tru
 scoreboard players set #tmp.A gg.math 0
 
 # インベントリにセット
-function gg:settings/player/inventory/return/inventory
+function gg:settings/player/ui/graves/inventory/return/inventory
 
 # リセット
 scoreboard players reset #tmp.A gg.math

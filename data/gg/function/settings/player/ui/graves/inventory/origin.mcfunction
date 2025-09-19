@@ -1,4 +1,4 @@
-#> gg:settings/palyer/inventory/origin
+#> gg:settings/player/ui/graves/inventory/origin
 # インベントリを元に戻す
 
 # マネキンを特定
@@ -20,7 +20,7 @@ data modify storage gg_tmp: dropItems.inventory set from storage gg_tmp: player.
 data modify storage gg_tmp: dropItems.equipment set from storage gg_tmp: player.tmp.origin.equipment
 
 # 戻す
-function gg:settings/player/inventory/return/
+function gg:settings/player/ui/graves/inventory/return/
 
 # モードを戻す
 execute if data storage gg_tmp: {player:{tmp:{gamemode:0}}} run gamemode survival @s
@@ -35,3 +35,8 @@ tp @n[type=minecraft:mannequin,tag=gg-thisMnq] ~ ~-1000 ~
 
 # タグを消去
 tag @s remove gg-checkInv
+
+# もとのダイアログを開きなおす
+execute store result score @s gg.playerSetting run data get storage gg_tmp: player.tmp.graveId 1
+execute if data storage gg_tmp: {player:{tmp:{before:"list"}}} run scoreboard players set @s gg.playerSetting 10
+execute if data storage gg_tmp: {player:{tmp:{before:"detail"}}} run scoreboard players add @s gg.playerSetting 10000

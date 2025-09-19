@@ -1,4 +1,4 @@
-#> gg:settings/palyer/inventory/return/
+#> gg:settings/player/ui/graves/inventory/return/
 # インベントリをセットする
 
 # スロットにアイテムがある
