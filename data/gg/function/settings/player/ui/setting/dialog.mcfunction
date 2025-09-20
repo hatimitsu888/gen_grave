@@ -49,8 +49,7 @@ $dialog show @s {\
                 {\
                     "id": "",\
                     "display": {\
-                        "text": "お墓に表示する情報",\
-                        "color": "gray"\
+                        "text": "お墓に表示する情報"\
                     },\
                     "initial": true\
                 }\
