@@ -106,7 +106,7 @@ $dialog show @s {\
             "label": {\
                 "text": "インベントリ"\
             },\
-            "tooltip": "クリックで死亡時のインベントリを確認できます。",\
+            "tooltip": "死亡時のインベントリを確認できます。",\
             "width": 120,\
             "action": {\
                 "type": "minecraft:run_command",\
@@ -117,7 +117,7 @@ $dialog show @s {\
             "label": {\
                 "text": "憑依"\
             },\
-            "tooltip": "クリックでお墓の周辺を確認することができます。",\
+            "tooltip": "お墓の周辺を確認することができます。",\
             "width": 40,\
             "action": {\
                 "type": "minecraft:run_command",\
@@ -136,7 +136,7 @@ $dialog show @s {\
             "label": {\
                 "text": "テレポート"\
             },\
-            "tooltip": "クリックでお墓にテレポートできます。",\
+            "tooltip": "お墓にテレポートできます。",\
             "width": 120,\
             "action": {\
                 "type": "minecraft:run_command",\
@@ -148,7 +148,7 @@ $dialog show @s {\
                 "text": "発光"\
             },\
             "tooltip": {\
-                "text": "クリックでお墓を20秒間発光させます。"\
+                "text": "お墓を20秒間発光させます。"\
             },\
             "width": 40,\
             "action": {\
@@ -165,7 +165,7 @@ $dialog show @s {\
                 "text": "削除",\
                 "color": "red"\
             },\
-            "tooltip": "クリックでお墓を削除します。",\
+            "tooltip": "お墓を削除します。",\
             "width": 30,\
             "action": {\
                 "type": "minecraft:run_command",\
