@@ -31,7 +31,8 @@ dispatch minecraft:storage[gg_tmp:] to struct {
     graveLoad: struct {
         dimension: string,
         x: int,
-        z: int
+        z: int,
+        isAlreadyLoaded: byte
     },
 
     /// アイテムをドロップするときのやつ
