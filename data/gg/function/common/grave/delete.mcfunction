@@ -9,14 +9,14 @@ function gg:common/grave/fetch_data with storage gg_tmp: id
 
 
 # お墓の位置をセット
-execute store result storage gg_tmp: graveLoad.x int 1 run data get storage gg_tmp: grave.pos[0] 1
-execute store result storage gg_tmp: graveLoad.z int 1 run data get storage gg_tmp: grave.pos[2] 1
+execute store result storage gg_tmp: chunkLoad.x int 1 run data get storage gg_tmp: grave.pos[0] 1
+execute store result storage gg_tmp: chunkLoad.z int 1 run data get storage gg_tmp: grave.pos[2] 1
 
 # ディメンションを取得
-data modify storage gg_tmp: graveLoad.dimension set from storage gg_tmp: grave.dimension
+data modify storage gg_tmp: chunkLoad.dimension set from storage gg_tmp: grave.dimension
 
 # お墓の位置をロード
-function gg:common/grave/load with storage gg_tmp: graveLoad
+function gg:common/load with storage gg_tmp: chunkLoad
 
 # idをスコアに変換
 execute store result score #tmp.A gg.id.player run data get storage gg_tmp: id.player
@@ -30,7 +30,7 @@ scoreboard players reset #tmp.A gg.id.player
 scoreboard players reset #tmp.A gg.id.grave
 
 # お墓の位置をアンロード
-function gg:common/grave/unload with storage gg_tmp: graveLoad
+function gg:common/unload with storage gg_tmp: chunkLoad
 
 
 # データを消去
