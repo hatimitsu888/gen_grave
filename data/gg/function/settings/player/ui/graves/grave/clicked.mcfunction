@@ -14,7 +14,7 @@ execute if score @s gg.playerSetting matches 11000..12999 run function gg:settin
 execute if score @s gg.playerSetting matches 13000..13999
 
 # テレポート
-execute if score @s gg.playerSetting matches 14000..14999
+execute if score @s gg.playerSetting matches 14000..14999 run function gg:settings/player/ui/graves/tp/
 
 # 発光
 execute if score @s gg.playerSetting matches 15000..15999 run function gg:settings/player/ui/graves/glowing/

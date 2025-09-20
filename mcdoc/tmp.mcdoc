@@ -48,5 +48,13 @@ dispatch minecraft:storage[gg_tmp:] to struct {
         x: int,
         y: int,
         z: int
+    },
+
+    /// テレポート時に使う箱
+    teleport: struct Teleport {
+        dimension: string,
+        x: double,
+        y: double,
+        z: double
     }
 }
