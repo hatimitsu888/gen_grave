@@ -17,7 +17,7 @@ execute if score @s gg.playerSetting matches 13000..13999
 execute if score @s gg.playerSetting matches 14000..14999
 
 # 発光
-execute if score @s gg.playerSetting matches 15000..15999
+execute if score @s gg.playerSetting matches 15000..15999 run function gg:settings/player/ui/graves/glowing/
 
 
 
