@@ -40,3 +40,11 @@ tag @s remove gg-checkInv
 execute store result score @s gg.playerSetting run data get storage gg_tmp: player.tmp.graveId 1
 execute if data storage gg_tmp: {player:{tmp:{before:"list"}}} run scoreboard players set @s gg.playerSetting 10
 execute if data storage gg_tmp: {player:{tmp:{before:"detail"}}} run scoreboard players add @s gg.playerSetting 10000
+
+# チャンクロードを解除
+data modify storage gg_tmp: chunkLoad set from storage gg_tmp: player.tmp.chunkLoads.inventory
+function gg:common/unload with storage gg_tmp: chunkLoad
+
+# リセット
+data remove storage gg_tmp: player.tmp.chunkLoads.inventory
+function gg:common/player/set_tmp with storage gg_tmp: id

@@ -66,6 +66,15 @@ dispatch minecraft:storage["gg_player:"] to struct {
 
             /// 前のページ
             before: string,
+
+            /// チャンクロード情報
+            chunkLoads: struct {
+                /// インベントリ確認
+                inventory: ::tmp::ChunkData,
+
+                /// 発光
+                glowing: ::tmp::ChunkData
+            }
         },
 
         /// お墓の情報

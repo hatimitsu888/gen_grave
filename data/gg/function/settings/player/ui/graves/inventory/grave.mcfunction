@@ -36,8 +36,17 @@ execute if entity @s[gamemode=survival] run data modify storage gg_tmp: player.t
 execute if entity @s[gamemode=creative] run data modify storage gg_tmp: player.tmp.gamemode set value 1
 execute if entity @s[gamemode=adventure] run data modify storage gg_tmp: player.tmp.gamemode set value 2
 
+# 現在位置をロードする
+execute store result storage gg_tmp: chunkLoad.x int 1 run data get entity @s Pos[0] 1
+execute store result storage gg_tmp: chunkLoad.z int 1 run data get entity @s Pos[2] 1
+data modify storage gg_tmp: chunkLoad.dimension set from entity @s Dimension
+function gg:common/load with storage gg_tmp: chunkLoad
+
+# チャンクロード情報を保存
+data modify storage gg_tmp: player.tmp.chunkLoads.inventory set from storage gg_tmp: chunkLoad
+
 # 保存
-function gg:settings/player/ui/graves/inventory/set_tmp with storage gg_tmp: id
+function gg:common/player/set_tmp with storage gg_tmp: id
 
 # リセット
 data remove storage gg_tmp: player.tmp
