@@ -2,6 +2,7 @@
 # お墓の情報を整理してダイアログに書き出す
 
 # スペクテイターモードでは確認不可
+execute if entity @s[gamemode=spectator] run dialog clear @s
 execute if entity @s[gamemode=spectator] run return run tellraw @s {text: "スペクテイターモードでお墓を確認することはできません！", color: "red"}
 
 # 音
@@ -23,6 +24,7 @@ function gg:common/player/fetch_data with storage gg_tmp: id
 data modify storage gg_tmp: graves set from storage gg_tmp: player.graves
 
 # お墓が存在していなかったら中断
+execute unless data storage gg_tmp: graves[0] run dialog clear @s
 execute unless data storage gg_tmp: graves[0] run return run tellraw @s {text:"お墓が1つも存在していません。", color:"gray"}
 
 # 新しい順
