@@ -25,6 +25,9 @@ execute store result score #tmp.A gg.id.grave run data get storage gg_tmp: id.gr
 # お墓を消去
 execute as @e[type=text_display, tag=gg-core] if score @s gg.id.player = #tmp.A gg.id.player if score @s gg.id.grave = #tmp.A gg.id.grave run function gg:common/grave/kill
 
+# 情報を保存
+function gg:common/player/set_tmp with storage gg_tmp: id
+
 # リセット
 scoreboard players reset #tmp.A gg.id.player
 scoreboard players reset #tmp.A gg.id.grave
