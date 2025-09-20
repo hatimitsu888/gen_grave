@@ -10,9 +10,6 @@ execute if score @s gg.playerSetting matches 10000..10999 run function gg:settin
 # インベントリを確認
 execute if score @s gg.playerSetting matches 11000..12999 run function gg:settings/player/ui/graves/inventory/grave
 
-# 憑依
-execute if score @s gg.playerSetting matches 13000..13999
-
 # テレポート
 execute if score @s gg.playerSetting matches 14000..14999 run function gg:settings/player/ui/graves/tp/
 

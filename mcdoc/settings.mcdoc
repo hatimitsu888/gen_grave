@@ -9,9 +9,6 @@ dispatch minecraft:storage["gg_common:world_settings"] to struct WorldSettings {
     /// ワンクリックでお墓を破壊する
     oneClick: boolean,
 
-    /// 憑依機能
-    posession: boolean,
-
     /// お墓へのテレポート
     tpGrave: boolean,
 
@@ -74,7 +71,10 @@ dispatch minecraft:storage["gg_player:"] to struct {
 
                 /// 発光
                 glowing: ::tmp::ChunkData
-            }
+            },
+
+            /// 位置
+            pos: [double, double, double]
         },
 
         /// お墓の情報

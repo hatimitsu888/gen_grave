@@ -115,13 +115,15 @@ $dialog show @s {\
         },\
         {\
             "label": {\
-                "text": "憑依"\
+                "text": "発光"\
             },\
-            "tooltip": "お墓の周辺を確認することができます。",\
+            "tooltip": {\
+                "text": "お墓を20秒間発光させます。"\
+            },\
             "width": 40,\
             "action": {\
                 "type": "minecraft:run_command",\
-                "command": "trigger gg.playerSetting set 13$(id)"\
+                "command": "trigger gg.playerSetting set 15$(id)"\
             }\
         },\
         {\
@@ -144,17 +146,8 @@ $dialog show @s {\
             }\
         },\
         {\
-            "label": {\
-                "text": "発光"\
-            },\
-            "tooltip": {\
-                "text": "お墓を20秒間発光させます。"\
-            },\
-            "width": 40,\
-            "action": {\
-                "type": "minecraft:run_command",\
-                "command": "trigger gg.playerSetting set 15$(id)"\
-            }\
+            "label": "",\
+            "width": 40\
         },\
         {\
             "label": "",\

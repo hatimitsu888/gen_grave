@@ -65,21 +65,6 @@ $dialog show @s {\
         },\
         {\
             "type": "minecraft:single_option",\
-            "key": "posession",\
-            "label": {\
-                "text": "憑依",\
-                "hover_event": {\
-                    "action": "show_text",\
-                    "value": "お墓へ憑依することで周辺の環境を見ることができます。"\
-                }\
-            },\
-            "options": [\
-                {"id": "0", display: {"text": "いいえ", "color": "red"}, "initial": $(posessionF)},\
-                {"id": "1", display: {"text": "はい", "color": "green"}, "initial": $(posessionT)}\
-            ]\
-        },\
-        {\
-            "type": "minecraft:single_option",\
             "key": "tpGrave",\
             "label": {\
                 "text": "テレポート",\

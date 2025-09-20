@@ -22,11 +22,6 @@ data modify storage gg_common:dialog scoreToString.result set string storage gg_
 execute if data storage gg_common:dialog {scoreToString:{result:"0"}} run data modify storage gg_common:world_settings oneClick set value false
 execute if data storage gg_common:dialog {scoreToString:{result:"1"}} run data modify storage gg_common:world_settings oneClick set value true
 
-# 憑依
-data modify storage gg_common:dialog scoreToString.result set string storage gg_common:dialog scoreToString.score 4 5
-execute if data storage gg_common:dialog {scoreToString:{result:"0"}} run data modify storage gg_common:world_settings posession set value false
-execute if data storage gg_common:dialog {scoreToString:{result:"1"}} run data modify storage gg_common:world_settings posession set value true
-
 # テレポート
 data modify storage gg_common:dialog scoreToString.result set string storage gg_common:dialog scoreToString.score 5 6
 execute if data storage gg_common:dialog {scoreToString:{result:"0"}} run data modify storage gg_common:world_settings tpGrave set value false

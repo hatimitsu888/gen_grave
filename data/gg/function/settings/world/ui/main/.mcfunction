@@ -5,13 +5,13 @@
 scoreboard players enable @s gg.worldSetting
 
 # すべて初期化
-data modify storage gg_common:dialog worldSettings set value {version:"0.0", keepExpT:"false", keepExpF:"false", quickGetT:"false", quickGetF:"false", oneClickT:"false", oneClickF:"false", posessionT:"false", posessionF:"false", tpGraveT:"false", tpGraveF:"false", graveMax:-1, keepInventoryT:"false", keepInventoryF:"false", text:""}
+data modify storage gg_common:dialog worldSettings set value {version:"0.0", keepExpT:"false", keepExpF:"false", quickGetT:"false", quickGetF:"false", oneClickT:"false", oneClickF:"false", tpGraveT:"false", tpGraveF:"false", graveMax:-1, keepInventoryT:"false", keepInventoryF:"false", text:""}
 
 # バージョンを設定
 data modify storage gg_common:dialog worldSettings.version set from storage gg_common:dialog version
 
 # マクロを設定
-data modify storage gg_common:dialog worldSettings.text set value "$(keepExp)$(quickGet)$(oneClick)$(posession)$(tpGrave)$(keepInventory)$(graveMax)"
+data modify storage gg_common:dialog worldSettings.text set value "$(keepExp)$(quickGet)$(oneClick)0$(tpGrave)$(keepInventory)$(graveMax)"
 
 # お墓の上限を取得
 data modify storage gg_common:dialog worldSettings.graveMax set from storage gg_common:world_settings graveMax
@@ -25,9 +25,6 @@ execute if data storage gg_common:world_settings {quickGet: false} run data modi
 
 execute if data storage gg_common:world_settings {oneClick: true} run data modify storage gg_common:dialog worldSettings.oneClickT set value "true"
 execute if data storage gg_common:world_settings {oneClick: false} run data modify storage gg_common:dialog worldSettings.oneClickF set value "true"
-
-execute if data storage gg_common:world_settings {posession: true} run data modify storage gg_common:dialog worldSettings.posessionT set value "true"
-execute if data storage gg_common:world_settings {posession: false} run data modify storage gg_common:dialog worldSettings.posessionF set value "true"
 
 execute if data storage gg_common:world_settings {tpGrave: true} run data modify storage gg_common:dialog worldSettings.tpGraveT set value "true"
 execute if data storage gg_common:world_settings {tpGrave: false} run data modify storage gg_common:dialog worldSettings.tpGraveF set value "true"

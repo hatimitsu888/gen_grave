@@ -19,10 +19,6 @@ dispatch minecraft:storage[gg_common:dialog] to struct {
         oneClickT: string,
         oneClickF: string,
 
-        /// 憑依機能
-        posessionT: string,
-        posessionF: string,
-
         /// お墓へのテレポート
         tpGraveT: string,
         tpGraveF: string,
