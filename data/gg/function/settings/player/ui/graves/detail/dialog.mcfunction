@@ -169,7 +169,7 @@ $dialog show @s {\
             "width": 30,\
             "action": {\
                 "type": "minecraft:run_command",\
-                "command": "trigger gg.playerSetting set 19$(id)"\
+                "command": "trigger gg.playerSetting set 18$(id)"\
             }\
         }\
     ]\

@@ -95,5 +95,11 @@ dispatch minecraft:storage[gg_common:dialog] to struct {
         xpL: int,
         xpP: int,
         id: string
+    },
+
+    /// 削除ページに記載する情報
+    delete: struct {
+        name: string,
+        id: string
     }
 }

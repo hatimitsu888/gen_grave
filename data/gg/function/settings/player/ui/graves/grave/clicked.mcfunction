@@ -22,10 +22,13 @@ execute if score @s gg.playerSetting matches 15000..15999 run function gg:settin
 
 
 # 名前を変更
-# execute if score @s gg.playerSetting matches 17000..17999
+# execute if score @s gg.playerSetting matches 16000..16999
 
 # 名前を適用
-# execute if score @s gg.playerSetting matches 18000..18999
+# execute if score @s gg.playerSetting matches 17000..17999
+
+# 削除確認
+execute if score @s gg.playerSetting matches 18000..18999 run function gg:settings/player/ui/graves/delete/
 
 # 削除
-execute if score @s gg.playerSetting matches 19000..19999
+execute if score @s gg.playerSetting matches 19000..19999 run function gg:settings/player/ui/graves/delete/delete
