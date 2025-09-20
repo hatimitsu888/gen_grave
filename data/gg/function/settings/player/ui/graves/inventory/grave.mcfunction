@@ -81,6 +81,9 @@ spectate @n[distance=..1,tag=gg-init,tag=gg-inv] @s
 # タグ削除
 tag @n[distance=..1, tag=gg-init] remove gg-init
 
+# リセット
+data remove storage gg_tmp: dropItems
+
 # お墓のアイテムを操作用のストレージに入れる
 data modify storage gg_tmp: dropItems.inventory set from storage gg_tmp: grave.inventory
 data modify storage gg_tmp: dropItems.equipment set from storage gg_tmp: grave.equipment
