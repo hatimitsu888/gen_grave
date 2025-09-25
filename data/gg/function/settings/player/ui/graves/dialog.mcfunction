@@ -11,6 +11,14 @@ $dialog show @s {\
             "type": "minecraft:plain_message",\
             "contents": [\
                 {\
+                    "text": "お墓の数："\
+                },\
+                {\
+                    "text": "$(count)",\
+                    "color": "aqua"\
+                },\
+                "\n\n",\
+                {\
                     "text": "並べ替え："\
                 },\
                 $(new),\

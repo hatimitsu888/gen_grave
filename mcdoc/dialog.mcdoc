@@ -56,6 +56,9 @@ dispatch minecraft:storage[gg_common:dialog] to struct {
         new: string,
         old: string,
 
+        /// 個数
+        count: int,
+
         /// アクション
         actions: [struct {
             label: struct {
