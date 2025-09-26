@@ -6,3 +6,6 @@ data remove storage gg_async: processes[0]
 
 # 発光
 execute if data storage gg_async: {tmp:{id:"glowing"}} run function gg:settings/player/ui/graves/glowing/async
+
+# 削除
+execute if data storage gg_async: {tmp:{id:"delete"}} run function gg:common/grave/delete/async
