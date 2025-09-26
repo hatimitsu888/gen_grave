@@ -18,3 +18,6 @@ function gg:common/unload with storage gg_tmp: chunkLoad
 # 情報を削除
 data remove storage gg_tmp: player.tmp.chunkLoads.glowing
 function gg:common/player/set_tmp with storage gg_tmp: id
+
+# aecを削除
+execute on passengers if entity @s[tag=gg-glowing] run kill @s
