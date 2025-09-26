@@ -39,32 +39,17 @@ function gg:common/load with storage gg_tmp: chunkLoad
 data modify storage gg_tmp: player.tmp.chunkLoads.glowing set from storage gg_tmp: chunkLoad
 function gg:common/player/set_tmp with storage gg_tmp: id
 
-# idをスコアに
-execute store result score #tmp.A gg.id.player run data get storage gg_tmp: id.player
-execute store result score #tmp.A gg.id.grave run data get storage gg_tmp: id.grave
+# お墓が読み込まれていたらそのまま実行
+execute store result storage gg_tmp: loaded.pos.x int 1 run data get storage gg_tmp: grave.pos[0] 1
+execute store result storage gg_tmp: loaded.pos.y int 1 run data get storage gg_tmp: grave.pos[1] 1
+execute store result storage gg_tmp: loaded.pos.z int 1 run data get storage gg_tmp: grave.pos[2] 1
+data modify storage gg_tmp: loaded.pos.dimension set from storage gg_tmp: grave.dimension
+function gg:common/loaded with storage gg_tmp: loaded.pos
+execute if data storage gg_tmp: {loaded:{isLoaded:1b}} run return run function gg:settings/player/ui/graves/glowing/glow
 
-# お墓を特定
-execute as @e[type=text_display, tag=gg-core] if score @s gg.id.player = #tmp.A gg.id.player if score @s gg.id.grave = #tmp.A gg.id.grave run tag @s add gg-thisCore
-
-# リセット
-scoreboard players reset #tmp.A gg.id.player
-scoreboard players reset #tmp.A gg.id.grave
-
-
-# AECを召喚
-#### AgeとDurationには1秒ほどの遅延があるらしいので、Durationは1秒少なく書く。
-summon area_effect_cloud ~ ~ ~ {Tags:["gg-init","gg-glowing"], Age:0, Duration:380, Radius:0f}
-
-# コアに乗せる
-ride @n[distance=..1, tag=gg-init, tag=gg-glowing] mount @n[type=text_display ,tag=gg-thisCore]
-
-# タグ削除
-tag @n[type=area_effect_cloud, tag=gg-init, tag=gg-glowing] remove gg-init
-
-
-# 発光
-execute as @n[type=text_display, tag=gg-thisCore] at @s run function gg:settings/player/ui/graves/glowing/set
-
-
-# タグ削除
-tag @n[type=text_display, tag=gg-thisCore] remove gg-thisCore
+# 非同期処理を開始
+data modify storage gg_async: processes append value {id:"glowing", pass:{pId:-1, gId:-1}, chunk:{x:0, y:0, z:0, dimension: ""}}
+data modify storage gg_async: processes[-1].pass.pId set from storage gg_tmp: id.player
+data modify storage gg_async: processes[-1].pass.gId set from storage gg_tmp: id.grave
+data modify storage gg_async: processes[-1].chunk set from storage gg_tmp: loaded.pos
+function gg:async/start
