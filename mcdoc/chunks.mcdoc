@@ -1,0 +1,45 @@
+dispatch minecraft:storage[gg_chunks:] to struct {
+    /// ロードされているチャンク
+    loadingChunks: [struct ChunkLoadData {
+        /// 位置(チャンク)
+        pos: struct {
+            x: int,
+            z: int,
+            dimension: string
+        },
+        
+        /// このチャンクを読み込んでいる処理数
+        count: [""],
+
+        /// 現在操作されているか否かのフラグ
+        this: boolean
+    }],
+
+    /// 実行用
+    set: struct Set {
+        /// 位置
+        pos: [double, double, double],
+
+        /// ディメンション
+        dimension: string
+    },
+
+    /// 操作用
+    tmp: ChunkLoadData,
+
+    /// チャンクロード用
+    load: struct {
+        x: int,
+        z: int,
+        dimension: string
+    },
+
+    /// フラグ
+    flags: struct {
+        /// 既にデータが存在している
+        dataAlreadyExists: byte,
+
+        /// 既にチャンクが読み込まれている
+        chunkAlreadyLoading: byte
+    }
+}
