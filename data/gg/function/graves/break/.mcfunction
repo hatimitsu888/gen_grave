@@ -20,4 +20,4 @@ execute as @p[tag=gg-this] run function gg:graves/break/xp with storage gg_tmp: 
 
 
 # お墓を削除
-function gg:common/grave/delete
+function gg:common/grave/delete/

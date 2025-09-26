@@ -8,7 +8,7 @@ execute store result storage gg_tmp: id.grave int 1 run scoreboard players get #
 scoreboard players reset #tmp.A gg.math
 
 # お墓を削除する
-function gg:common/grave/delete
+function gg:common/grave/delete/
 
 # 一覧に戻る
 scoreboard players set @s gg.playerSetting 10

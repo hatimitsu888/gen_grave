@@ -5,7 +5,7 @@
 $data modify storage gg_tmp: id.grave set from storage gg_player: players[{id:$(player)}].graves[0].id
 
 # そのお墓を消去する
-function gg:common/grave/delete
+function gg:common/grave/delete/
 
 # 減算
 scoreboard players remove #tmp.A gg.math 1
