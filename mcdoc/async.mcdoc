@@ -1,0 +1,30 @@
+dispatch minecraft:storage[gg_async:] to struct {
+    /// 実行中
+    nowRunning: boolean,
+
+    /// 読み込みの可否
+    isLoaded: byte,
+
+    /// 待機中の処理
+    processes: [struct Process{
+        /// 処理のid
+        id: string,
+
+        /// 実行時に渡す情報
+        pass: any,
+
+        /// 読み込んでいるチャンク情報
+        chunk: struct {
+            x: int,
+            y: int,
+            z: int,
+            dimension: string
+        }
+    }],
+
+    // 処理を保存する
+    tmpProcesses: [Process],
+
+    /// 情報を一時的に保存する
+    tmp: Process
+}
