@@ -29,15 +29,18 @@ function gg:common/grave/fetch_data with storage gg_tmp: id
 # リセット
 scoreboard players reset #tmp.A gg.math
 
-# チャンクを読み込む
-execute store result storage gg_tmp: chunkLoad.x int 1 run data get storage gg_tmp: grave.pos[0] 1
-execute store result storage gg_tmp: chunkLoad.z int 1 run data get storage gg_tmp: grave.pos[2] 1
-data modify storage gg_tmp: chunkLoad.dimension set from storage gg_tmp: grave.dimension
-function gg:common/load with storage gg_tmp: chunkLoad
+
+# 位置情報をセット
+data modify storage gg_chunks: set.pos set from storage gg_tmp: grave.pos
+data modify storage gg_chunks: set.dimension set from storage gg_tmp: grave.dimension
 
 # チャンク情報を保存
-data modify storage gg_tmp: player.tmp.chunkLoads.glowing set from storage gg_tmp: chunkLoad
+data modify storage gg_tmp: player.tmp.chunkLoads.glowing set from storage gg_chunks: set
 function gg:common/player/set_tmp with storage gg_tmp: id
+
+# チャンクを読み込む
+function gg:common/chunk/add
+
 
 # お墓が読み込まれていたらそのまま実行
 execute store result storage gg_tmp: loaded.pos.x int 1 run data get storage gg_tmp: grave.pos[0] 1
