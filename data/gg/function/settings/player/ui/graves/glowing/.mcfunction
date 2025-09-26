@@ -32,8 +32,8 @@ scoreboard players reset #tmp.A gg.math
 # チャンクを読み込む
 execute store result storage gg_tmp: chunkLoad.x int 1 run data get storage gg_tmp: grave.pos[0] 1
 execute store result storage gg_tmp: chunkLoad.z int 1 run data get storage gg_tmp: grave.pos[2] 1
-execute store result storage gg_tmp: chunkLoad.dimension int 1 run data get storage gg_tmp: grave.dimension 1
-function gg:common/load with storage gg_tmp: id
+data modify storage gg_tmp: chunkLoad.dimension set from storage gg_tmp: grave.dimension
+function gg:common/load with storage gg_tmp: chunkLoad
 
 # チャンク情報を保存
 data modify storage gg_tmp: player.tmp.chunkLoads.glowing set from storage gg_tmp: chunkLoad

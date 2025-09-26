@@ -13,7 +13,7 @@ execute on passengers if entity @s[tag=gg-base] run data modify entity @s Glowin
 
 # チャンクロード解除
 data modify storage gg_tmp: chunkLoad set from storage gg_tmp: player.tmp.chunkLoads.glowing
-function gg:common/unload with storage gg_tmp: id
+function gg:common/unload with storage gg_tmp: chunkLoad
 
 # 情報を削除
 data remove storage gg_tmp: player.tmp.chunkLoads.glowing
