@@ -22,13 +22,6 @@ function gg:common/grave/fetch_data with storage gg_tmp: id
 scoreboard players reset #tmp.A gg.math
 
 
-# チャンクロード
-execute store result storage gg_tmp: chunkLoad.x int 1 run data get storage gg_tmp: grave.pos[0] 1
-execute store result storage gg_tmp: chunkLoad.z int 1 run data get storage gg_tmp: grave.pos[2] 1
-data modify storage gg_tmp: chunkLoad.dimension set from storage gg_tmp: grave.dimension
-function gg:common/load with storage gg_tmp: chunkLoad
-
-
 # テレポートするための情報を取り出す
 data modify storage gg_tmp: teleport.x set from storage gg_tmp: grave.pos[0]
 data modify storage gg_tmp: teleport.y set from storage gg_tmp: grave.pos[1]
@@ -37,7 +30,3 @@ data modify storage gg_tmp: teleport.dimension set from storage gg_tmp: grave.di
 
 # テレポート
 function gg:settings/player/ui/graves/tp/teleport with storage gg_tmp: teleport
-
-
-# チャンクアンロード
-function gg:common/unload with storage gg_tmp: chunkLoad
