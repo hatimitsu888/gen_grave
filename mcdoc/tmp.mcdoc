@@ -56,5 +56,16 @@ dispatch minecraft:storage[gg_tmp:] to struct {
         x: double,
         y: double,
         z: double
+    },
+
+    /// 場所がロードされているか確認する
+    loaded: struct {
+        pos: struct {
+            x: int,
+            y: int,
+            z: int,
+            dimension: string
+        },
+        isLoaded: boolean
     }
 }
