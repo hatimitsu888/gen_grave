@@ -17,3 +17,10 @@ function gg:common/chunk/remove
 
 # データを消去
 function gg:common/grave/delete/delete_grave_data with storage gg_tmp: id
+
+# 削除フラグが立っていたらダイアログを開きなおす
+execute if data storage gg_tmp: {player:{tmp:{deleteNow:true}}} as @a if score @s gg.id.player = #tmp.A gg.id.player at @s run function gg:settings/player/ui/graves/delete/show_list
+
+# リセット
+scoreboard players reset #tmp.A gg.id.player
+scoreboard players reset #tmp.A gg.id.grave

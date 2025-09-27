@@ -1,11 +1,11 @@
 #> gg:settings/player/ui/graves/tp/
 # お墓にテレポート
 
-# ダイアログを消す
-dialog clear @s
-
 # テレポートできない
 execute if data storage gg_common:world_settings {tpGrave: false} run return run tellraw @s {text:"お墓へのテレポートが許可されていません。", color:"red"}
+
+# 待機
+dialog show @s gg:wait
 
 # プレイヤーの情報を取り出す
 function gg:common/player/fetch_data with storage gg_tmp: id
@@ -30,3 +30,6 @@ data modify storage gg_tmp: teleport.dimension set from storage gg_tmp: grave.di
 
 # テレポート
 function gg:settings/player/ui/graves/tp/teleport with storage gg_tmp: teleport
+
+# ダイアログを消す
+dialog clear @s
