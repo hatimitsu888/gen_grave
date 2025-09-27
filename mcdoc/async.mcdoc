@@ -26,5 +26,8 @@ dispatch minecraft:storage[gg_async:] to struct {
     tmpProcesses: [Process],
 
     /// 情報を一時的に保存する
-    tmp: Process
+    tmp: Process,
+
+    /// データの受け渡し
+    pass: any
 }
