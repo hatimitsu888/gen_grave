@@ -10,7 +10,7 @@ $dialog show @s {\
         {\
             "type": "minecraft:plain_message",\
             "contents": {\
-                "text": "※[お墓に表示されるアイテムは\n一部のみ表示されます。",\
+                "text": "※お墓に表示されるアイテムは\n一部のみ表示されます。",\
                 "color": "white"\
             }\
         }\
