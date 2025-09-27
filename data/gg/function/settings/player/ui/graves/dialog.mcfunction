@@ -14,9 +14,22 @@ $dialog show @s {\
                     "text": "お墓の数："\
                 },\
                 {\
-                    "text": "$(count)",\
+                    "text": "$(count)    ",\
                     "color": "aqua"\
                 },\
+                [\
+                    {\
+                        "text": "最大：",\
+                        "hover_event": {\
+                            "action": "show_text",\
+                            "value": "この最大値を超えると古いお墓が自動的に削除されます。",\
+                        }\
+                    },\
+                    {\
+                        "text": "$(max)",\
+                        "color": "aqua"\
+                    }\
+                ],\
                 "\n\n",\
                 {\
                     "text": "並べ替え："\

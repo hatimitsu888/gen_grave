@@ -59,6 +59,9 @@ dispatch minecraft:storage[gg_common:dialog] to struct {
         /// 個数
         count: int,
 
+        /// 最大
+        max: int,
+
         /// アクション
         actions: [struct {
             label: struct {
