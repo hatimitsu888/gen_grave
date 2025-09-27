@@ -2,7 +2,7 @@
 # お墓にテレポート
 
 # テレポートできない
-execute if data storage gg_common:world_settings {tpGrave: false} run return run tellraw @s {text:"お墓へのテレポートが許可されていません。", color:"red"}
+execute if data storage gg_common:world_settings {tpGrave: false} run return run function gg:settings/player/ui/graves/tp/fail
 
 # 待機
 dialog show @s gg:wait
