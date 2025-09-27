@@ -8,15 +8,13 @@ function gg:common/player/fetch_data with storage gg_tmp: id
 function gg:common/grave/fetch_data with storage gg_tmp: id
 
 
-# お墓の位置をセット
-execute store result storage gg_tmp: chunkLoad.x int 1 run data get storage gg_tmp: grave.pos[0] 1
-execute store result storage gg_tmp: chunkLoad.z int 1 run data get storage gg_tmp: grave.pos[2] 1
+# 位置情報をセット
+data modify storage gg_chunks: set.pos set from storage gg_tmp: grave.pos
+data modify storage gg_chunks: set.dimension set from storage gg_tmp: grave.dimension
 
-# ディメンションを取得
-data modify storage gg_tmp: chunkLoad.dimension set from storage gg_tmp: grave.dimension
+# チャンクを読み込む
+function gg:common/chunk/add
 
-# お墓の位置をロード
-function gg:common/load with storage gg_tmp: chunkLoad
 
 # お墓が読み込まれていたらそのまま実行
 execute store result storage gg_tmp: loaded.pos.x int 1 run data get storage gg_tmp: grave.pos[0] 1
@@ -31,5 +29,4 @@ data modify storage gg_async: processes append value {id:"delete", pass:{pId:-1,
 data modify storage gg_async: processes[-1].pass.pId set from storage gg_tmp: id.player
 data modify storage gg_async: processes[-1].pass.gId set from storage gg_tmp: id.grave
 data modify storage gg_async: processes[-1].chunk set from storage gg_tmp: loaded.pos
-data modify storage gg_async: processes[-1].pass.chunkLoad set from storage gg_tmp: chunkLoad
 function gg:async/start
