@@ -4,6 +4,10 @@
 # プレイヤーのidを取得
 execute store result storage gg_tmp: id.player int 1 run scoreboard players get @s gg.id.player
 
+# お墓が存在しているかチェック
+execute unless function gg:settings/player/ui/graves/grave/check run return run function gg:settings/player/ui/graves/grave/fail
+
+
 # お墓を開く
 execute if score @s gg.playerSetting matches 10000..10999 run function gg:settings/player/ui/graves/detail/
 
