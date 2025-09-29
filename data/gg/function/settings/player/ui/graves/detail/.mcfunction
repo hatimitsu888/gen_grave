@@ -20,7 +20,7 @@ data modify storage gg_common:dialog detail.name set from storage gg_tmp: grave.
 data modify storage gg_common:dialog detail.dimension set from storage gg_tmp: grave.dimension
     # ディメンションを翻訳
     execute if data storage gg_tmp: {grave:{dimension:"minecraft:overworld"}} run data modify storage gg_common:dialog detail.dimension set value "オーバーワールド"
-    execute if data storage gg_tmp: {grave:{dimension:"minecraft:nether"}} run data modify storage gg_common:dialog detail.dimension set value "ネザー"
+    execute if data storage gg_tmp: {grave:{dimension:"minecraft:the_nether"}} run data modify storage gg_common:dialog detail.dimension set value "ネザー"
     execute if data storage gg_tmp: {grave:{dimension:"minecraft:the_end"}} run data modify storage gg_common:dialog detail.dimension set value "エンド"
 execute store result storage gg_common:dialog detail.x int 1 run data get storage gg_tmp: grave.pos[0] 1
 execute store result storage gg_common:dialog detail.y int 1 run data get storage gg_tmp: grave.pos[1] 1
