@@ -1,8 +1,9 @@
 #> gg:common:grave/delete/glowing
 # 発光中だったら
 
-# チャンクのロード情報を取得
-data modify storage gg_tmp: chunkLoad set from storage gg_tmp: player.tmp.chunkLoads.glowing
+# チャンクのロードを解除
+data modify storage gg_chunks: set set from storage gg_tmp: player.tmp.chunkLoads.glowing
+function gg:common/chunk/remove
 
 # データを削除
 data remove storage gg_tmp: player.tmp.chunkLoads.glowing
