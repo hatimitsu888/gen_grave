@@ -2,7 +2,7 @@
 # リロード時の処理
 
 # バージョン
-data modify storage gg_common:dialog version set value "v1.0"
+data modify storage gg_common:dialog version set value "v1.1"
 
 # ワールド設定を初期化（初インストール時のみ）
 execute unless data storage gg_common:world_settings newInstall run function gg:settings/world/default
