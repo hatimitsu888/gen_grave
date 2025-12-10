@@ -8,7 +8,7 @@ data modify storage gg_common:dialog version set value "v1.1"
 execute unless data storage gg_common:world_settings newInstall run function gg:settings/world/default
 
 # キープインベントリをオンにする
-gamerule keepInventory true
+gamerule keep_inventory true
 
 ##### スコア #####
 # プレイヤーid
