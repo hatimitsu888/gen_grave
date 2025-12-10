@@ -1,13 +1,13 @@
 /// 一時保存用のストレージ
 dispatch minecraft:storage[gg_tmp:] to struct {
     /// プレイヤー設定を一時的に保存する
-    player: ::settings::PlayerSettings,
+    player: super::settings::PlayerSettings,
 
     /// お墓を一時的に保存する
-    grave: ::settings::Grave,
+    grave: super::settings::Grave,
 
     /// お墓をすべて保存する
-    graves: [::settings::Grave],
+    graves: [super::settings::Grave],
 
     /// idを保存しておく
     id: struct {

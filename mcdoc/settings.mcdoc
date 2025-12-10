@@ -67,10 +67,10 @@ dispatch minecraft:storage["gg_player:"] to struct {
             /// チャンクロード情報
             chunkLoads: struct {
                 /// インベントリ確認
-                inventory: ::chunks::Set,
+                inventory: super::chunks::Set,
 
                 /// 発光
-                glowing: ::chunks::Set
+                glowing: super::chunks::Set
             },
 
             /// 位置
