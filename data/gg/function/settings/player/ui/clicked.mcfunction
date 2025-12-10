@@ -16,7 +16,7 @@ execute if score @s gg.playerSetting matches 10..12 run function gg:settings/pla
 execute if score @s gg.playerSetting matches 0 run dialog clear @s
 
 # 設定を反映 initial=1
-execute if score @s gg.playerSetting matches 1000..9999 run function gg:settings/player/ui/setting/apply
+execute if score @s gg.playerSetting matches 100..999 run function gg:settings/player/ui/setting/apply
 
 # お墓を開く initial=10
 execute if score @s gg.playerSetting matches 10000..19999 run function gg:settings/player/ui/graves/grave/clicked

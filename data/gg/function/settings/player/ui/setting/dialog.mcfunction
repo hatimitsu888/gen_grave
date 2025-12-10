@@ -64,16 +64,6 @@ $dialog show @s {\
             "initial": $(exp),\
             "on_true": "1",\
             "on_false": "0"\
-        },\
-        {\
-            "type": "minecraft:boolean",\
-            "key": "item",\
-            "label": {\
-                "text": "アイテム*"\
-            },\
-            "initial": $(items),\
-            "on_true": "1",\
-            "on_false": "0"\
         }\
     ],\
     "can_close_with_escape": true,\

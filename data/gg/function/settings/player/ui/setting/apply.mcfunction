@@ -17,11 +17,6 @@ data modify storage gg_common:dialog scoreToString.result set string storage gg_
 execute if data storage gg_common:dialog {scoreToString:{result:"0"}} run data modify storage gg_tmp: player.settings.visibles.exp set value false
 execute if data storage gg_common:dialog {scoreToString:{result:"1"}} run data modify storage gg_tmp: player.settings.visibles.exp set value true
 
-# アイテム
-data modify storage gg_common:dialog scoreToString.result set string storage gg_common:dialog scoreToString.score 3 4
-execute if data storage gg_common:dialog {scoreToString:{result:"0"}} run data modify storage gg_tmp: player.settings.visibles.items set value false
-execute if data storage gg_common:dialog {scoreToString:{result:"1"}} run data modify storage gg_tmp: player.settings.visibles.items set value true
-
 # プレイヤーidを取得
 execute store result storage gg_tmp: id.player int 1 run scoreboard players get @s gg.id.player
 

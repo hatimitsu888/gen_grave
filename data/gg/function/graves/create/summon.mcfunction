@@ -18,9 +18,6 @@ data remove storage gg_tmp: text
     # プレイヤーの設定を取り出す
     function gg:common/player/fetch_data with storage gg_tmp: id
 
-    # アイテムの表示
-    execute if data storage gg_tmp: {player:{settings:{visibles:{items:true}}}} run function gg:graves/create/get_items/
-    
     # 経験値の表示
     execute if data storage gg_tmp: {player:{settings:{visibles:{exp:true}}}} run data modify storage gg_tmp: text.A append value [{text:"\n"}, {text:"レベル："}, {nbt:"grave.xp.levels", storage:"gg_tmp:", color:green}]
 

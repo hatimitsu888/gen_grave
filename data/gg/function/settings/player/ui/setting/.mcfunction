@@ -5,7 +5,7 @@
 data modify storage gg_common:dialog playerSettings set value {text:"", othersBreakingF:"false", othersBreakingT:"false", exp:"false", items:"false"}
 
 # マクロを設定
-data modify storage gg_common:dialog playerSettings.text set value "$(othersBreaking)$(exp)$(item)"
+data modify storage gg_common:dialog playerSettings.text set value "$(othersBreaking)$(exp)"
 
 # プレイヤー情報を取得
 execute store result storage gg_tmp: id.player int 1 run scoreboard players get @s gg.id.player
