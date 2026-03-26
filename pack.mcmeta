@@ -1,7 +1,7 @@
 {
   "pack": {
-    "description": "死亡地点にお墓を生成するデータパックです。\n[ v1.1 | 1.21.11 ]",
-    "min_format": [94, 1],
-    "max_format": [94, 1]
+    "description": "死亡地点にお墓を生成するデータパックです。\n[ v1.2 | 26.1 ]",
+    "min_format": [101, 1],
+    "max_format": [101, 1]
   }
 }
