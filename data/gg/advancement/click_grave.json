@@ -1,31 +1,39 @@
 {
-  "criteria": {
-    "left": {
-      "trigger": "minecraft:player_hurt_entity",
-      "conditions": {
-        "entity": {
-          "type": "minecraft:interaction",
-          "nbt": "{Tags:[\"gg-interaction\"]}"
+    "criteria": {
+        "left": {
+            "trigger": "minecraft:player_hurt_entity",
+            "conditions": {
+                "entity": {
+                    "minecraft:entity_type": "minecraft:interaction",
+                    "minecraft:entity_tags": {
+                        "any_of": [
+                            "gg-interaction"
+                        ]
+                    }
+                }
+            }
+        },
+        "right": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "minecraft:entity_type": "minecraft:interaction",
+                    "minecraft:entity_tags": {
+                        "any_of": [
+                            "gg-interaction"
+                        ]
+                    }
+                }
+            }
         }
-      }
     },
-    "right": {
-      "trigger": "minecraft:player_interacted_with_entity",
-      "conditions": {
-        "entity": {
-          "type": "minecraft:interaction",
-          "nbt": "{Tags:[\"gg-interaction\"]}"
-        }
-      }
+    "requirements": [
+        [
+            "left",
+            "right"
+        ]
+    ],
+    "rewards": {
+        "function": "gg:graves/break/click/"
     }
-  },
-  "requirements": [
-    [
-      "left",
-      "right"
-    ]
-  ],
-  "rewards": {
-    "function": "gg:graves/break/click/"
-  }
 }
