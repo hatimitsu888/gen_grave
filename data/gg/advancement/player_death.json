@@ -1,24 +1,21 @@
 {
-  "criteria": {
-    "death": {
-      "trigger": "minecraft:tick",
-      "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "gg.playerDeath": {
-                "min": -2147483648,
-                "max": 2147483647
-              }
+    "criteria": {
+        "death": {
+            "trigger": "minecraft:tick",
+            "conditions": {
+                "player": {
+                    "type": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                        "gg.playerDeath": {
+                            "min": -2147483648
+                        }
+                    }
+                }
             }
-          }
-        ]
-      }
+        }
+    },
+    "rewards": {
+        "function": "gg:graves/create/"
     }
-  },
-  "rewards": {
-    "function": "gg:graves/create/"
-  }
 }

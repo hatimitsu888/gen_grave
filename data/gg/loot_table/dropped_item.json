@@ -1,21 +1,19 @@
 {
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
+    "pools": [
         {
-          "type": "minecraft:item",
-          "name": "minecraft:stone",
-          "functions": [
-            {
-              "function": "minecraft:set_custom_data",
-              "tag": {
-                "gg_droppedItem": true
-              }
-            }
-          ]
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:stone",
+                    "modifier": {
+                        "type": "minecraft:set_custom_data",
+                        "tag": {
+                            "gg_droppedItem": true
+                        }
+                    }
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }

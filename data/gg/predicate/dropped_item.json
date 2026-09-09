@@ -1,7 +1,15 @@
 {
-  "condition": "minecraft:entity_properties",
-  "entity": "this",
-  "predicate": {
-    "nbt": "{Item: {components: {\"minecraft:custom_data\": {gg_droppedItem: 1b}}}}"
-  }
+    "type": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+        "minecraft:slots": {
+            "contents": {
+                "predicates": {
+                    "minecraft:custom_data": {
+                        "gg_droppedItem": true
+                    }
+                }
+            }
+        }
+    }
 }
