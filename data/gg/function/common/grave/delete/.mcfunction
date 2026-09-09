@@ -22,7 +22,7 @@ execute store result storage gg_tmp: loaded.pos.y int 1 run data get storage gg_
 execute store result storage gg_tmp: loaded.pos.z int 1 run data get storage gg_tmp: grave.pos[2] 1
 data modify storage gg_tmp: loaded.pos.dimension set from storage gg_tmp: grave.dimension
 function gg:common/loaded with storage gg_tmp: loaded.pos
-execute if data storage gg_tmp: {loaded:{isLoaded:1b}} run return run function gg:common/grave/delete/delete
+execute if data storage gg_tmp: loaded{isLoaded:1b} run return run function gg:common/grave/delete/delete
 
 # 非同期処理を開始
 data modify storage gg_async: processes append value {id:"delete", pass:{pId:-1, gId:-1}, chunk:{x:0, y:0, z:0, dimension: ""}}
