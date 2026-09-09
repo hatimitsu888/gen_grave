@@ -1,0 +1,54 @@
+{
+    "type": "minecraft:add",
+    "inputs": [
+        {
+            "type": "minecraft:number_dispatcher",
+            "cases": [
+                {
+                    "condition": {
+                        "type": "minecraft:int_value_check",
+                        "value": {
+                            "type": "minecraft:storage",
+                            "storage": "gg_tmp:",
+                            "path": "grave.xp.levels"
+                        },
+                        "test": {
+                            "min": 17,
+                            "max": 31
+                        }
+                    },
+                    "value": {
+                        "type": "minecraft:from_float",
+                        "input": "gg:exp/17"
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "minecraft:int_value_check",
+                        "value": {
+                            "type": "minecraft:storage",
+                            "storage": "gg_tmp:",
+                            "path": "grave.xp.levels"
+                        },
+                        "test": {
+                            "min": 32
+                        }
+                    },
+                    "value": {
+                        "type": "minecraft:from_float",
+                        "input": "gg:exp/32"
+                    }
+                }
+            ],
+            "default": {
+                "type": "minecraft:from_float",
+                "input": "gg:exp/0"
+            }
+        },
+        {
+            "type": "minecraft:storage",
+            "storage": "gg_tmp:",
+            "path": "grave.xp.points"
+        }
+    ]
+}

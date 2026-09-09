@@ -1,0 +1,41 @@
+{
+    "type": "minecraft:add",
+    "inputs": [
+        {
+            "type": "minecraft:sub",
+            "left": {
+                "type": "minecraft:mul",
+                "inputs": [
+                    4.5,
+                    {
+                        "type": "minecraft:pow",
+                        "base": {
+                            "type": "minecraft:from_int",
+                            "input": {
+                                "type": "minecraft:storage",
+                                "storage": "gg_tmp:",
+                                "path": "grave.xp.levels"
+                            }
+                        },
+                        "exponent": 2
+                    }
+                ]
+            },
+            "right": {
+                "type": "minecraft:mul",
+                "inputs": [
+                    162.5,
+                    {
+                        "type": "minecraft:from_int",
+                        "input": {
+                            "type": "minecraft:storage",
+                            "storage": "gg_tmp:",
+                            "path": "grave.xp.levels"
+                        }
+                    }
+                ]
+            }
+        },
+        2220
+    ]
+}

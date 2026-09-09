@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:min",
+    "inputs": [
+        {
+            "type": "minecraft:mul",
+            "inputs": [
+                7,
+                {
+                    "type": "minecraft:storage",
+                    "storage": "gg_tmp:",
+                    "path": "grave.xp.levels"
+                }
+            ]
+        },
+        100
+    ]
+}

@@ -48,11 +48,11 @@ data remove storage gg_tmp: grave
     execute store result storage gg_tmp: setName.z int 1 run data get storage gg_tmp: grave.pos[2] 1
     function gg:graves/create/set_name with storage gg_tmp: setName
 
-# 経験値を計算
-function gg:graves/create/math_xp
+# 死亡時の経験値を計算
+execute store result storage gg_tmp: grave.xp.result int 1 run compute default integer gg:exp/death
 
-# トータル
-function gg:graves/create/math_xp_total/
+# トータルの経験値を計算
+execute store result storage gg_tmp: grave.xp.total int 1 run compute default integer gg:exp/total
 
 ##### お墓を生成する #####
 function gg:graves/create/summon

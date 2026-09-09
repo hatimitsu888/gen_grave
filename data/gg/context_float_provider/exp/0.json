@@ -1,0 +1,31 @@
+{
+    "type": "minecraft:add",
+    "inputs": [
+        {
+            "type": "minecraft:pow",
+            "base": {
+                "type": "minecraft:from_int",
+                "input": {
+                    "type": "minecraft:storage",
+                    "storage": "gg_tmp:",
+                    "path": "grave.xp.levels"
+                }
+            },
+            "exponent": 2
+        },
+        {
+            "type": "minecraft:mul",
+            "inputs": [
+                6,
+                {
+                    "type": "minecraft:from_int",
+                    "input": {
+                        "type": "minecraft:storage",
+                        "storage": "gg_tmp:",
+                        "path": "grave.xp.levels"
+                    }
+                }
+            ]
+        }
+    ]
+}
