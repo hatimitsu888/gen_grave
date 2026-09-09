@@ -12,7 +12,7 @@ function gg:common/player/fetch_data with storage gg_tmp: id
 execute if data storage gg_tmp: {player:{settings:{othersBreaking:false}}} unless score @s gg.id.player = @p[tag=gg-this] gg.id.player run return run function gg:graves/break/click/fail
 
 # 効果
-execute at @s run particle minecraft:block{block_state:{Name:"minecraft:dirt"}} ~ ~0.5 ~ 0.2 0.2 0.2 1 10 normal
+execute at @s run particle minecraft:block{block_state:"minecraft:dirt"} ~ ~0.5 ~ 0.2 0.2 0.2 1 10 normal
 execute at @s run playsound block.rooted_dirt.break block @a ~ ~ ~ 1 1 0
 
 # ワンクリック
