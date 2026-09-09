@@ -19,7 +19,7 @@ data remove storage gg_tmp: text
     function gg:common/player/fetch_data with storage gg_tmp: id
 
     # 経験値の表示
-    execute if data storage gg_tmp: {player:{settings:{visibles:{exp:true}}}} run data modify storage gg_tmp: text.A append value [{text:"\n"}, {text:"レベル："}, {nbt:"grave.xp.levels", storage:"gg_tmp:", color:green}]
+    execute if data storage gg_tmp: {player:{settings:{visibles:{exp:true}}}} run data modify storage gg_tmp: text.A append value [{text:"\n"}, {text:"レベル："}, {nbt:"grave.xp.levels", storage:"gg_tmp:", plain:true, color:green}]
 
 # 適用
 tag @s add gg-this
